@@ -41,11 +41,11 @@ const TodoItem = (props) => {
          </div> 
       </li>)
   }
-  // 獲取 div DOM
-  const messagesEndRef = useRef(null);
+  // 獲取 底部div DOM
+  const todoItemEndRef = useRef(null);
   // 
   const scrollToBottom = () => {
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    todoItemEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
   useEffect(scrollToBottom, [todo]);
 
@@ -55,7 +55,7 @@ const TodoItem = (props) => {
     <ul className=' pr-4'>
     {toggleSortArray(todo,toogleState)}
     </ul>
-    <div ref={messagesEndRef}/>
+    <div ref={todoItemEndRef}/>
     </div>
   )
 }
