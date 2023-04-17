@@ -6,7 +6,7 @@ import TodoInput from './component/TodoInput';
 
 function App() {
   const [todo, setTodo] = useState([]);
-  const [toogleState, setToogleState] = useState(false);
+  const [isToogle, setIsToogle] = useState(false);
   const newTodo = useRef(null);
 
   return (
@@ -16,12 +16,9 @@ function App() {
         <h2 className="ml-1 text-second">Add things to do</h2>
         <hr className="h-[2px] border-none  bg-blue-600 " />
         <Progressbar todo={todo} />
-        <TodoItem todo={todo} setTodo={setTodo} toogleState={toogleState} />
+        <TodoItem todo={todo} setTodo={setTodo} isToogle={isToogle} />
         <hr className="h-[2px] border-none  bg-blue-600 " />
-        <ToogleSwitch
-          toogleState={toogleState}
-          setToogleState={setToogleState}
-        />
+        <ToogleSwitch isToogle={isToogle} setIsToogle={setIsToogle} />
         <TodoInput newTodo={newTodo} setTodo={setTodo} todo={todo} />
       </div>
     </div>

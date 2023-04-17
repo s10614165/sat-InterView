@@ -1,11 +1,11 @@
 import React from 'react';
 
 function ToogleSwitch(props) {
-  const { toogleState, setToogleState } = props;
+  const { isToogle, setIsToogle } = props;
 
   // 修改 toogleState 狀態
   function handleClick() {
-    setToogleState((current) => !current);
+    setIsToogle((current) => !current);
   }
   return (
     <div className="mt-4 flex justify-end">
@@ -14,7 +14,7 @@ function ToogleSwitch(props) {
         <input
           type="checkbox"
           className="sr-only peer"
-          value={toogleState}
+          value={isToogle}
           onClick={() => {
             handleClick();
           }}

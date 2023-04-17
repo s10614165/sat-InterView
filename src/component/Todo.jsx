@@ -2,14 +2,12 @@ import React from 'react';
 
 const Todo = (props) => {
   const { todo, setTodo, todoItem } = props;
-  console.log(todo);
 
   // 修改 todo.finish 至 完成 或 未完成
   function handleFinish(id, todos) {
     const updatedTodos = todos.map((item) =>
       item.id === id ? { ...item, finish: !item.finish } : item
     );
-    console.log(updatedTodos);
     setTodo(updatedTodos);
   }
   // 刪除 todo
