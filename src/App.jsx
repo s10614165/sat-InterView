@@ -10,7 +10,7 @@ function App() {
   const newTodo = useRef(null);
 
   return (
-    <div className="bg-gradient-to-b from-cyan-300 to-violet-500 min-h-screen flex  justify-center">
+    <div className="bg-gradient-to-b from-cyan-100 to-violet-100 min-h-screen flex  justify-center">
       <div className="w-11/12">
         <h1 className=" mt-5 text-second text-4xl font-bold ">Todo List</h1>
         <h2 className="ml-1 text-second">Add things to do</h2>
