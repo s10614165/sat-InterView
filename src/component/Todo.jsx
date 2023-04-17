@@ -39,6 +39,7 @@ const Todo = (props) => {
       </div>
       <div className=" mr-2 flex justify-center items-center">
         <button
+          className=" text-cancle"
           type="button"
           onClick={() => {
             handleDelete(todoItem.id, todo);

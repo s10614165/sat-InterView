@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         basic: 'rgba(239,246,255,1)',
-        second: 'rgba(128,148,172,1)',
+        second: 'rgba(128,140,190,1)',
+        cancle: 'rgba(207,213,240,1)',
         scrollbar: ['rounded'],
       },
     },
