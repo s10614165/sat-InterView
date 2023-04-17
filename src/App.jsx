@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
-import Progressbar from './component/Progressbar';
-import TodoItem from './component/TodoItem';
-import ToggleSwitch from './component/ToggleSwitch';
-import TodoInput from './component/TodoInput';
+import Progressbar from './components/Progressbar';
+import TodoItem from './components/TodoItem';
+import ToggleSwitch from './components/ToggleSwitch';
+import TodoInput from './components/TodoInput';
 
 function App() {
   const [todo, setTodo] = useState([]);
