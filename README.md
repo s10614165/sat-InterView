@@ -112,5 +112,3 @@ pnpm run dev
 感謝 工智聯科技股份有限公司，給予我此次練功的機會，在開發困境上的問題，都給我新的知識與經驗，此次不足的地方，會去更加了解如何使用，以及運作方式。
 
 期望有機會能參與面試 ，謝謝!
-
-?descriptionFromFileType=function+toLocaleUpperCase()+{+[native+code]+}+File&mimeType=application/octet-stream&fileName=sat-interView.md&fileType=undefined&fileExtension=md
