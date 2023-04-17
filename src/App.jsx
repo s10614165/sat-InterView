@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 import Progressbar from './component/Progressbar';
 import TodoItem from './component/TodoItem';
-import ToogleSwitch from './component/ToogleSwitch';
+import ToggleSwitch from './component/ToggleSwitch';
 import TodoInput from './component/TodoInput';
 
 function App() {
   const [todo, setTodo] = useState([]);
-  const [isToogle, setIsToogle] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
   const newTodo = useRef(null);
 
   return (
@@ -16,9 +16,9 @@ function App() {
         <h2 className="ml-1 text-second">Add things to do</h2>
         <hr className="h-[2px] border-none  bg-blue-600 " />
         <Progressbar todo={todo} />
-        <TodoItem todo={todo} setTodo={setTodo} isToogle={isToogle} />
+        <TodoItem todo={todo} setTodo={setTodo} isToggle={isToggle} />
         <hr className="h-[2px] border-none  bg-blue-600 " />
-        <ToogleSwitch isToogle={isToogle} setIsToogle={setIsToogle} />
+        <ToggleSwitch isToggle={isToggle} setIsToggle={setIsToggle} />
         <TodoInput newTodo={newTodo} setTodo={setTodo} todo={todo} />
       </div>
     </div>

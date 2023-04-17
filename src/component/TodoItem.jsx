@@ -2,26 +2,36 @@ import React, { useRef, useEffect } from 'react';
 import Todo from './Todo';
 
 function TodoItem(props) {
-  const { todo, setTodo, isToogle } = props;
+  const { todo, setTodo, isToggle } = props;
 
-  // 若 toogleState 為 true ，則依照是否完成進行升冪排序 ，若 false ，則按照時間升冪排序
-  function toggleSortArray(todos, isToogle) {
-    return isToogle ? sortByFinishAscending(todos) : sortByTimeAscending(todos);
+  // 若 isToggle 為 true ，則依照是否完成進行升冪排序 ，若 false ，則按照時間升冪排序
+  function toggleSortArray(todos, isToggle) {
+    return isToggle ? sortByFinishAscending(todos) : sortByTimeAscending(todos);
   }
   // 按照時間升冪排序
   function sortByTimeAscending(todos) {
     return todos
       .sort((a, b) => a.id - b.id)
-      .map((todoitem) => (
-        <Todo todo={todo} todoItem={todoitem} setTodo={setTodo} />
+      .map((todoItem) => (
+        <Todo
+          key={todoItem.id}
+          todo={todo}
+          todoItem={todoItem}
+          setTodo={setTodo}
+        />
       ));
   }
   // 按照是否完成進行升冪排序
   function sortByFinishAscending(todos) {
     return todos
-      .sort((a, b) => a.finish - b.finish)
-      .map((todoitem) => (
-        <Todo todo={todo} todoItem={todoitem} setTodo={setTodo} />
+      .sort((a, b) => a.finish - b.finish || a.id - b.id)
+      .map((todoItem) => (
+        <Todo
+          key={todoItem.id}
+          todo={todo}
+          todoItem={todoItem}
+          setTodo={setTodo}
+        />
       ));
   }
 
@@ -34,7 +44,7 @@ function TodoItem(props) {
 
   return (
     <div className="mt-4 mb-4 min-h-[50vh] overflow-auto h-32 scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-gray-300 overflow-y-scroll scrollbar-thumb-rounded-full">
-      <ul className=" pr-4">{toggleSortArray(todo, isToogle)}</ul>
+      <ul className=" pr-4">{toggleSortArray(todo, isToggle)}</ul>
       <div ref={todoItemEndRef} />
     </div>
   );
