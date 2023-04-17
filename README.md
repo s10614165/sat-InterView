@@ -1,4 +1,4 @@
-# sat-interView
+# sat-interview
 
 > ## 環境設置
 
