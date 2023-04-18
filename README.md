@@ -23,17 +23,17 @@ cd .\sat-InterView\
 ### 安裝套件
 
 ```javascript
-npm install -g pnpm
+npm install -g pnpm //若無pnpm可跳過
 ```
 
 ```javascript
-pnpm install
+pnpm install  // 或使用 npm install
 ```
 
 ### 開啟專案
 
 ```javascript
-pnpm run dev
+pnpm run dev // 或使用 npm run dev
 ```
 
 ### 資料夾說明
