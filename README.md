@@ -23,7 +23,7 @@ cd .\sat-InterView\
 ### 安裝套件
 
 ```javascript
-npm install -g pnpm //若無pnpm可跳過
+npm install -g pnpm //若已經安裝 pnpm 可略過
 ```
 
 ```javascript
